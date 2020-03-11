@@ -14,9 +14,14 @@ class AminoAcidLL{
    * pair and increments the codon counter for that codon.
    * NOTE: Does not check for repeats!! */
   AminoAcidLL(String inCodon){
-  
+      /*aminoAcid  AAR.getAAFC(inCodon);
+      codons  AAR.getCFAA(aminoAcid);
+      counts  incrCodons(inCodon);
+      next null; */
   }
+  void incrCodons(String c){
 
+  }
   /********************************************************************************************/
   /* Recursive method that increments the count for a specific codon:
    * If it should be at this node, increments it and stops, 
@@ -24,7 +29,17 @@ class AminoAcidLL{
    * If there is no next node, add a new node to the list that would contain the codon. 
    */
   private void addCodon(String inCodon){
-  
+    if(aminoAcid == AAR.getAAFC(inCodon)){
+      incrCodons(inCodon);
+    }
+    else{
+      if(next != null){
+        next.addCodon(inCodon);
+      }
+      else{
+        //next new AALL(c);
+      }
+    }
   }
 
 
