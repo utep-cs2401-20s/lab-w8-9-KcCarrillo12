@@ -185,6 +185,7 @@ class AminoAcidLL{
   public static AminoAcidLL sort(AminoAcidLL inList){
     if(inList == null || inList.next == null)
       return inList;
+    
     else{
       for(AminoAcidLL i=inList; i.next != null; i = i.next){
         for(AminoAcidLL j = i.next; j != null; j = j.next){
